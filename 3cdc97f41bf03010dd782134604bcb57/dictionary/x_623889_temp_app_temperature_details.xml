@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Temperature Details" max_length="40" name="x_623889_temp_app_temperature_details" sizeclass="0" type="collection">
+        <element label="体異常あるか" max_length="40" name="abnormal_checkbox" type="boolean"/>
+        <element choice="1" label="異常具体状況" max_length="32" name="abnormal_content" reference="x_623889_temp_app_abnormal_list" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="カード番号" max_length="8" name="card_id" type="string" use_dependent_field="true"/>
+        <element label="インポート先" max_length="32" name="import_from" read_only="true" reference="x_623889_temp_app_temperature_import_list" type="reference"/>
+        <element label="ユーザを手動入力" max_length="40" name="input_user_checkbox" type="boolean"/>
+        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="レポート日付" max_length="40" name="report_date" type="glide_date" use_dynamic_default="true"/>
+        <element choice="3" default="awaiting" label="承認状態" max_length="40" name="state" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="異常温度承認待ち" sequence="10" value="awaiting"/>
+                <element inactive_on_update="false" label="異常温度承認済み" sequence="20" value="approved"/>
+                <element inactive_on_update="false" label="異常温度承認されない" sequence="30" value="rejected"/>
+                <element inactive_on_update="false" label="正常温度なのでクローズ" sequence="40" value="closed"/>
+            </choice>
+        </element>
+        <element default="0.0" label="体温" max_length="15" name="temperature" type="decimal"/>
+        <element label="ユーザ" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="abnormal_content"/>
+        </index>
+        <index name="index2">
+            <element name="import_from"/>
+        </index>
+        <index name="index3">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

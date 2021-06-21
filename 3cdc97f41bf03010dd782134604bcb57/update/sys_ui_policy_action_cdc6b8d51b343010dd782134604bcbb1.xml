@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>false</disabled>
+        <field>card_id</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-16 07:31:35</sys_created_on>
+        <sys_id>cdc6b8d51b343010dd782134604bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>card_id</sys_name>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_update_name>sys_ui_policy_action_cdc6b8d51b343010dd782134604bcbb1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 07:31:35</sys_updated_on>
+        <table>x_623889_temp_app_temperature_details</table>
+        <ui_policy display_value="Set user input checkbox">5386f4d51b343010dd782134604bcbea</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

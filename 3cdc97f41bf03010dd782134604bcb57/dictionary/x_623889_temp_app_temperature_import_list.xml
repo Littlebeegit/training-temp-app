@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Temperature Import List" max_length="40" name="x_623889_temp_app_temperature_import_list" sizeclass="1" type="collection">
+        <element display="true" label="インポート説明" mandatory="true" max_length="40" name="description" type="string"/>
+        <element label="チェック詳細情報" max_length="2000" name="detail_check_content" read_only="true" type="string"/>
+        <element choice="1" label="インポート結果" max_length="40" name="import_check_result" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="全部成功" sequence="10" value="1"/>
+                <element inactive_on_update="false" label="全部失敗" sequence="20" value="2"/>
+                <element inactive_on_update="false" label="一部成功" sequence="30" value="3"/>
+            </choice>
+        </element>
+        <element default="0" label="インポート回数" max_length="40" name="import_time" read_only="true" type="integer"/>
+    </element>
+</database>

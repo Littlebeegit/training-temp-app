@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Temperature Details" language="en" table="x_623889_temp_app_temperature_details">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Temperature Details</label>
+            <language>en</language>
+            <name>x_623889_temp_app_temperature_details</name>
+            <plural>Temperature Details</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-15 06:22:03</sys_created_on>
+            <sys_id>f57d1b381bf03010dd782134604bcbb9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Temperature Details</sys_name>
+            <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+            <sys_update_name>sys_documentation_x_623889_temp_app_temperature_details__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-15 06:22:03</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

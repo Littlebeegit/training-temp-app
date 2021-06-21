@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Abnormal List" max_length="40" name="x_623889_temp_app_abnormal_list" sizeclass="7" type="collection">
+        <element display="true" label="異常具体状況" max_length="40" name="abnormal_content" type="string"/>
+    </element>
+</database>

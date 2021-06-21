@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="import_check_result" label="インポート結果" language="en" table="x_623889_temp_app_temperature_import_list">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>import_check_result</element>
+            <help/>
+            <hint/>
+            <label>インポート結果</label>
+            <language>en</language>
+            <name>x_623889_temp_app_temperature_import_list</name>
+            <plural>インポート結果s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-16 01:47:57</sys_created_on>
+            <sys_id>2858a30d1b303010dd782134604bcb80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>インポート結果</sys_name>
+            <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+            <sys_update_name>sys_documentation_x_623889_temp_app_temperature_import_list_import_check_result_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-16 01:47:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

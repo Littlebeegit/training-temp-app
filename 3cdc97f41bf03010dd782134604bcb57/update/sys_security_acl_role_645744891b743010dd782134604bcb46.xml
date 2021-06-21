@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-15 09:25:05</sys_created_on>
+        <sys_id>645744891b743010dd782134604bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_623889_temp_app_temperature_import_list.x_623889_temp_app.user</sys_name>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_security_acl display_value="x_623889_temp_app_temperature_import_list">b2d604891b743010dd782134604bcb5d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_645744891b743010dd782134604bcb46</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-15 09:25:05</sys_updated_on>
+        <sys_user_role display_value="x_623889_temp_app.user" name="x_623889_temp_app.user">d583a37c1bf03010dd782134604bcba6</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

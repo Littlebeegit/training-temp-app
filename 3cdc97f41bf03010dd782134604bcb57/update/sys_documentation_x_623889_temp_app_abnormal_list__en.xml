@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Abnormal List" language="en" table="x_623889_temp_app_abnormal_list">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Abnormal List</label>
+            <language>en</language>
+            <name>x_623889_temp_app_abnormal_list</name>
+            <plural>Abnormal Lists</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-17 05:16:28</sys_created_on>
+            <sys_id>74a165a51b707010dd782134604bcb52</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Abnormal List</sys_name>
+            <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+            <sys_update_name>sys_documentation_x_623889_temp_app_abnormal_list__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-17 05:16:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

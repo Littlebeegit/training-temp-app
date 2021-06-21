@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>temp_app_import_excel</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>一括インポート</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[doImport();
+
+function doImport() {
+    var endNode = '\n';
+
+    var sysAttachment = new GlideSysAttachment();
+    var currAttachments = sysAttachment.getAttachments('x_623889_temp_app_temperature_import_list', current.sys_id);
+
+    // チェック結果メッセージ	
+    var msg = '';
+    var hasOk = false;
+    var hasAttachment = false;
+
+    while (currAttachments.next()) {
+        hasAttachment = true;
+        var attachmentSysId = currAttachments.getValue('sys_id');
+
+        // ファイルの種類をチェックする。
+        var contentType = currAttachments.getValue('content_type');
+        if (contentType != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+            msg = msg + 'ファイル「' + currAttachments.getValue('file_name') + '」の種類がExcelではありません。' + endNode;
+            continue;
+        }
+
+        // 添付ファイルのデータはExcelファイルとして取得する。
+        var contentStream = sysAttachment.getContentStream(attachmentSysId);
+        var dataParser = new sn_impex.GlideExcelParser();
+        dataParser.setSource(contentStream);
+
+        // Excelファイルのシート名を取得する。
+        var sheetNames = dataParser.getSheetNames();
+
+        var errStr = '';
+        for (var sheetIndex = 0; sheetIndex < sheetNames.length; sheetIndex++) {
+            var currentSheetErrorStr = '';
+            dataParser.setSheetName(sheetNames[sheetIndex]);
+            if (dataParser.parse()) {
+                var headers = dataParser.getColumnHeaders();
+
+                var rowNum = 0;
+                while (dataParser.next()) {
+                    rowNum = rowNum + 1;
+                    var row = dataParser.getRow();
+
+                    // 項目の内容をチェックする。
+                    var row_header1 = row[headers[0]];
+                    var row_header2 = row[headers[1]];
+                    var row_header3 = row[headers[2]];
+
+                    var pattern1 = /^\d+(\.\d+)?$/g;
+                    var checkResult = pattern1.exec(row_header2);
+                    //gs.addInfoMessage(row_header1 + ':' + row_header2 + ':' + checkResult);
+                    var checkNg = false;
+                    if (checkResult == null || checkResult == '') {
+                        currentSheetErrorStr = currentSheetErrorStr + '　・' + (rowNum + 1) + '行目の' + headers[1] + 'の型は数字ではありません。値: ' + row_header2 + endNode;
+                        checkNg = true;
+                    } else if ((Number(row_header2) < 34) || (Number(row_header2) > 45)) {
+                        currentSheetErrorStr = currentSheetErrorStr + '　・' + (rowNum + 1) + '行目の' + headers[1] + 'の値は34と45の間ではありません。値: ' + row_header2 + endNode;
+                        checkNg = true;
+                    }
+                    if (!checkNg) {
+                        hasOk = true;
+                        insertData(row_header1, row_header2, row_header3);
+                    }
+                }
+
+                if (currentSheetErrorStr != '') {
+                    errStr = errStr + 'シート「' + sheetNames[sheetIndex] + '」' + endNode + currentSheetErrorStr;
+                }
+            } else {
+                gs.addErrorMessage(dataParser.getErrorMessage());
+            }
+        }
+
+        // 該当ファイルのチェック結果を出力する。
+        if (errStr != '') {
+            // チェックエラーの場合
+            msg = 'ファイル「' + currAttachments.getValue('file_name') + '」に下記エラーが検知されました。' + endNode + errStr + endNode;
+        }
+        dataParser.close();
+    }
+
+    // エラーメッセージ全体を出力する。
+    if (!hasAttachment) {
+        msg = '添付ファイルが見つかりません。' + endNode + 'アップロードしてください。';
+    }
+    var finalCheckResult = '';
+    if (msg == '') {
+        finalCheckResult = '1';
+    } else if (hasOk) {
+        finalCheckResult = '3';
+    } else {
+        finalCheckResult = '2';
+    }
+    updateImportInfo(finalCheckResult, msg);
+
+    // 画面遷移を設定する。
+    action.setRedirectURL(current);
+}
+
+function updateImportInfo(result, msg) {
+    var importList = new GlideRecord('x_623889_temp_app_temperature_import_list');
+    importList.get(current.sys_id);
+    var t = Number(importList.getValue('import_time'));
+    importList.setValue('import_check_result', result);
+    importList.setValue('import_time', t + 1);
+    importList.setValue('detail_check_content', msg);
+    importList.update();
+}
+
+function insertData(cardId, temperature, reportDate) {
+    // ユーザのsys_idを取得
+    var userInfo = new GlideRecord('sys_user');
+    userInfo.get('user_name', cardId);
+    var userSysId = userInfo.getValue('sys_id');
+
+    // データ登録
+    var tempRecord = new GlideRecord('x_623889_temp_app_temperature_details');
+    tempRecord.initialize();
+    tempRecord.import_from = current.sys_id;
+    tempRecord.card_id = cardId;
+    tempRecord.user = userSysId;
+    tempRecord.temperature = temperature;
+    tempRecord.report_date = reportDate;
+    tempRecord.insert();
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-15 09:14:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>71c488851b743010dd782134604bcb18</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>一括インポート</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_update_name>sys_ui_action_71c488851b743010dd782134604bcb18</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 06:51:49</sys_updated_on>
+        <table>x_623889_temp_app_temperature_import_list</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

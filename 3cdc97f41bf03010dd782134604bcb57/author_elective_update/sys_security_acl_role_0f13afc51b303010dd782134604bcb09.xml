@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-16 01:25:11</sys_created_on>
+        <sys_id>0f13afc51b303010dd782134604bcb09</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_623889_temp_app_temperature_import_list.x_623889_temp_app.manager</sys_name>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_security_acl display_value="x_623889_temp_app_temperature_import_list">ba13a7c51b303010dd782134604bcb1a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_0f13afc51b303010dd782134604bcb09</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 01:28:10</sys_updated_on>
+        <sys_user_role display_value="x_623889_temp_app.manager" name="x_623889_temp_app.manager">6663677c1bf03010dd782134604bcb53</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</application>
+        <file_path/>
+        <instance_id>886bbf9adb57e010ad8dd7c8f496197e</instance_id>
+        <instance_name>dev110591</instance_name>
+        <name>sys_security_acl_role_0f13afc51b303010dd782134604bcb09</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-16 01:25:11</sys_created_on><sys_id>0f13afc51b303010dd782134604bcb09</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_623889_temp_app_temperature_import_list.x_623889_temp_app.manager</sys_name><sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package><sys_policy/><sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope><sys_security_acl display_value="x_623889_temp_app_temperature_import_list">ba13a7c51b303010dd782134604bcb1a</sys_security_acl><sys_update_name>sys_security_acl_role_0f13afc51b303010dd782134604bcb09</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-16 01:28:10</sys_updated_on><sys_user_role display_value="x_623889_temp_app.manager" name="x_623889_temp_app.manager">6663677c1bf03010dd782134604bcb53</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>2018481790</payload_hash>
+        <record_name>x_623889_temp_app_temperature_import_list.x_623889_temp_app.manager</record_name>
+        <reverted_from/>
+        <source>30dc97f41bf03010dd782134604bcb5a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-16 01:28:10</sys_created_on>
+        <sys_id>6ec3e7091b303010dd782134604bcbf7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a126ed1180000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 01:28:10</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>e6c3e709ff303010da974c88d9941ff7</update_guid>
+        <update_guid_history>e6c3e709ff303010da974c88d9941ff7:2018481790,4b13afc5be303010f1af90a36e61b70c:740468348</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_623889_temp_app_temperature_import_list.x_623889_temp_app.manager">0844e7091b303010dd782134604bcb03</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-16 01:30:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>30f64704de684490abac829cdf7cb240</sys_id>
+        <sys_metadata>0f13afc51b303010dd782134604bcb09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_623889_temp_app_temperature_import_list.x_623889_temp_app.manager</sys_name>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_scope_delete display_value="">1e6409f265e64284843aa015e37fdd10</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_0f13afc51b303010dd782134604bcb09</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_0f13afc51b303010dd782134604bcb09">6ec3e7091b303010dd782134604bcbf7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 01:30:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
