@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Temperature Details" max_length="40" name="x_623889_temp_app_temperature_details" sizeclass="0" type="collection">
+    <element label="Temperature Details" max_length="40" name="x_623889_temp_app_temperature_details" sizeclass="8" type="collection">
         <element label="体異常あるか" max_length="40" name="abnormal_checkbox" type="boolean"/>
         <element choice="1" label="異常具体状況" max_length="32" name="abnormal_content" reference="x_623889_temp_app_abnormal_list" type="reference">
             <choice/>
@@ -7,7 +7,7 @@
         <element attributes="edge_encryption_enabled=true" label="カード番号" max_length="8" name="card_id" type="string" use_dependent_field="true"/>
         <element label="インポート先" max_length="32" name="import_from" read_only="true" reference="x_623889_temp_app_temperature_import_list" type="reference"/>
         <element label="ユーザを手動入力" max_length="40" name="input_user_checkbox" type="boolean"/>
-        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="レポート日付" max_length="40" name="report_date" type="glide_date" use_dynamic_default="true"/>
+        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="日付" max_length="40" name="report_date" type="glide_date" use_dynamic_default="true"/>
         <element choice="3" default="awaiting" label="承認状態" max_length="40" name="state" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="異常温度承認待ち" sequence="10" value="awaiting"/>
