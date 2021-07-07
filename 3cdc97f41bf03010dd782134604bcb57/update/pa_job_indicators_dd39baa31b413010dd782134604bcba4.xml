@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_job_indicators">
+    <pa_job_indicators action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <collect>2</collect>
+        <collect_indicator>true</collect_indicator>
+        <display>temporary job for collecting 異常具体状況 - TemperatureWeeklyIndicator</display>
+        <indicator display_value="TemperatureWeeklyIndicator">9b1f62631b413010dd782134604bcbfa</indicator>
+        <job display_value="temporary job for collecting 異常具体状況">9139baa31b413010dd782134604bcb9e</job>
+        <sys_class_name>pa_job_indicators</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-06 03:02:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd39baa31b413010dd782134604bcba4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TemperatureWeeklyIndicator.temporary job for collecting 異常具体状況</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_update_name>pa_job_indicators_dd39baa31b413010dd782134604bcba4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-06 03:02:37</sys_updated_on>
+    </pa_job_indicators>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_indicator_breakdowns">
+    <pa_indicator_breakdowns action="INSERT_OR_UPDATE">
+        <breakdown display_value="承認状態">7fe7be671b413010dd782134604bcb43</breakdown>
+        <display>true</display>
+        <indicator display_value="TemperatureWeeklyIndicator">9b1f62631b413010dd782134604bcbfa</indicator>
+        <order/>
+        <sql_statement/>
+        <sys_class_name>pa_indicator_breakdowns</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-06 02:57:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>77e7be671b413010dd782134604bcb4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>承認状態.TemperatureWeeklyIndicator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Temp App" source="x_623889_temp_app">3cdc97f41bf03010dd782134604bcb57</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Temp App">3cdc97f41bf03010dd782134604bcb57</sys_scope>
+        <sys_update_name>pa_indicator_breakdowns_77e7be671b413010dd782134604bcb4a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-06 02:57:03</sys_updated_on>
+    </pa_indicator_breakdowns>
+</record_update>
