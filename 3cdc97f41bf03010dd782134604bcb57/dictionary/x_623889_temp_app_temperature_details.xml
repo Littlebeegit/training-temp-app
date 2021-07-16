@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Temperature Details" max_length="40" name="x_623889_temp_app_temperature_details" sizeclass="19" type="collection">
+    <element label="Temperature Details" max_length="40" name="x_623889_temp_app_temperature_details" sizeclass="20" type="collection">
         <element label="体異常あるか" max_length="40" name="abnormal_checkbox" type="boolean"/>
         <element choice="1" label="異常具体状況" max_length="32" name="abnormal_content" reference="x_623889_temp_app_abnormal_list" type="reference">
             <choice/>
